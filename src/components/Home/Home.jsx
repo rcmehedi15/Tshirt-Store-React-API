@@ -3,13 +3,21 @@ import { useLoaderData } from 'react-router-dom';
 import Tshirt from '../Tshirt/Tshirt';
 import Cart from '../Cart/Cart';
 import './Home.css';
+import toast, { Toaster } from 'react-hot-toast';
+
 const Home = () => {
     const tshirts = useLoaderData();
 
     const [cart, setCart] = useState([]);
     const handleAddToCart = tshirt => {
-        const newCart = [...cart, tshirt];
-        setCart(newCart)
+        const exists = cart.find(ts => ts._id === tshirt._id);
+        if (exists) {
+            toast('Already Added')
+        }
+        else {
+            const newCart = [...cart, tshirt];
+            setCart(newCart)
+        }
     }
     const handleRemoveFromCart = id => {
         const remaining = cart.filter(ts => ts._id !== id);

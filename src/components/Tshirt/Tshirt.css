@@ -17,6 +17,6 @@
     border-radius: 8px;
     cursor: pointer;
 }
-btn-buy-now:hover{
+.btn-buy-now:hover{
     background-color: #210c0c;
 }
