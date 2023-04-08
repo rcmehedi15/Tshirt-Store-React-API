@@ -1,0 +1,13 @@
+.cross-btn {
+    background-color: #f50909;
+    color: #fff;
+    padding: 3px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+
+}
+.cross-btn:hover{
+    background-color: #320f0f;
+}
